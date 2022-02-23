@@ -2,6 +2,7 @@ import { Box, Container, Flex, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "../components/Header";
 import GameBoard from "../components/GameBoard";
+import Rules from "../components/Rules";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <Header />
       </Container>
       <GameBoard />
+      <Rules />
     </Box>
   );
 }
