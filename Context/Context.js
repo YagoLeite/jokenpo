@@ -7,6 +7,7 @@ const GameContext = ({ children }) => {
   const [state, dispatch] = useReducer(GameReducer, {
     userPick: "",
     housePick: "",
+    isPlaying: true,
   });
 
   return <Game.Provider value={{ state, dispatch }}>{children}</Game.Provider>;

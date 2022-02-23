@@ -1,13 +1,13 @@
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Flex } from "@chakra-ui/react";
 import React from "react";
 import Image from "next/image";
 import triangleBg from "../styles/images/bg-triangle.svg";
 import { GameState } from "../Context/Context";
+import NextGame from "./NextGame";
+import CurrentGame from "./CurrentGame";
 const GameBoard = () => {
-  const { dispatch } = GameState();
-  const selectionHandler = (option) => {
-    dispatch({ type: "SUBMIT", value: option });
-  };
+  const { state, dispatch } = GameState();
+
   return (
     <Box
       w="500px"
@@ -18,9 +18,8 @@ const GameBoard = () => {
       mt="20px"
       left="25%"
     >
-      <Button onClick={() => selectionHandler("ROCK")}>Rock</Button>
-      <Button onClick={() => selectionHandler("PAPER")}>Paper</Button>
-      <Button onClick={() => selectionHandler("SCISSORS")}>Scissors</Button>
+      {state.isPlaying && <CurrentGame />}
+      {!state.isPlaying && <NextGame />}
     </Box>
   );
 };
