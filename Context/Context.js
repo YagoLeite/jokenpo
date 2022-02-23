@@ -8,6 +8,7 @@ const GameContext = ({ children }) => {
     userPick: "",
     housePick: "",
     isPlaying: true,
+    test: 0,
   });
 
   return <Game.Provider value={{ state, dispatch }}>{children}</Game.Provider>;

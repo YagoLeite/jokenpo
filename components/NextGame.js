@@ -3,6 +3,7 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import { GameState } from "../Context/Context";
 const NextGame = () => {
   const { state, dispatch } = GameState();
+
   return (
     <Flex>
       <Box>

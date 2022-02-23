@@ -1,5 +1,5 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import triangleBg from "../styles/images/bg-triangle.svg";
 import { GameState } from "../Context/Context";
@@ -7,6 +7,14 @@ import NextGame from "./NextGame";
 import CurrentGame from "./CurrentGame";
 const GameBoard = () => {
   const { state, dispatch } = GameState();
+
+  useEffect(() => {
+    dispatch({ type: "LOADING", value: localStorage.getItem("test") });
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("test", state.test);
+  }, [state.test]);
 
   return (
     <Box

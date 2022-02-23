@@ -20,9 +20,7 @@ const Header = () => {
       </Box>
       <Box>
         <Text color="white">Score</Text>
-        <Text color="white">
-          {state.userPick.length !== 0 ? state.userPick : ""}
-        </Text>
+        <Text color="white">{state.test || ""}</Text>
       </Box>
     </Flex>
   );
