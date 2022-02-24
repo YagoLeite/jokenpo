@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Button } from "@chakra-ui/react";
-import { GameState } from "../Context/Context";
+import { GameState } from "../../Context/Context";
 
 const CurrentGame = () => {
   const { state, dispatch } = GameState();

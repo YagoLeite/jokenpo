@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Button, Flex, Text } from "@chakra-ui/react";
-import { GameState } from "../Context/Context";
+import { GameState } from "../../Context/Context";
 const NextGame = () => {
   const { state, dispatch } = GameState();
 

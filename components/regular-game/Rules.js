@@ -10,7 +10,7 @@ import {
   ModalCloseButton,
 } from "@chakra-ui/react";
 import Image from "next/image";
-import rulesImg from "../styles/images/image-rules.svg";
+import rulesImg from "../../styles/images/image-rules.svg";
 
 const Rules = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();

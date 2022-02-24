@@ -40,3 +40,16 @@ export const GameReducer = (state, action) => {
       return state;
   }
 };
+
+export const SpockReducer = (state, action) => {
+  switch (action.type) {
+    case "SUBMIT":
+      return state;
+    case "NEXT-GAME":
+      return state;
+    case "LOADING":
+      return state;
+    default:
+      return state;
+  }
+};

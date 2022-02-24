@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Box, Text } from "@chakra-ui/react";
-import { GameState } from "../Context/Context";
+import { GameState } from "../../Context/Context";
 
 const Header = () => {
   const { state } = GameState();
