@@ -42,11 +42,18 @@ export const GameReducer = (state, action) => {
 };
 
 export const SpockReducer = (state, action) => {
+  const options = ["ROCK", "PAPER", "SCISSORS", "LIZARD", "SPOCK"];
   switch (action.type) {
     case "SUBMIT":
-      return state;
+      const housePick = options[Math.floor(Math.random() * options.length)];
+      return {
+        ...state,
+        userPick: action.value,
+        housePick: housePick,
+        isPlaying: false,
+      };
     case "NEXT-GAME":
-      return state;
+      return { ...state, userPick: "", isPlaying: true };
     case "LOADING":
       return state;
     default:
