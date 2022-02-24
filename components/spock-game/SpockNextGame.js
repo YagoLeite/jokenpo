@@ -11,7 +11,7 @@ const SpockNextGame = () => {
         <Button>{spockState.userPick}</Button>
       </Box>
       <Box>
-        <Text>ahsudhausdhuashd</Text>
+        <Text>{spockState.result}</Text>
         <Button onClick={() => spockDispatch({ type: "NEXT-GAME" })}>
           Next Game
         </Button>

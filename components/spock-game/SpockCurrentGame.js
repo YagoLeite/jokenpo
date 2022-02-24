@@ -14,8 +14,8 @@ const CurrentGame = () => {
       <Button onClick={() => selectionHandler("ROCK")}>Rock</Button>
       <Button onClick={() => selectionHandler("PAPER")}>Paper</Button>
       <Button onClick={() => selectionHandler("SCISSORS")}>Scissors</Button>
-      <Button onClick={() => selectionHandler("LIZARD")}>Paper</Button>
-      <Button onClick={() => selectionHandler("SPOCK")}>Scissors</Button>
+      <Button onClick={() => selectionHandler("LIZARD")}>Lizard</Button>
+      <Button onClick={() => selectionHandler("SPOCK")}>Spock</Button>
     </Flex>
   );
 };

@@ -9,16 +9,16 @@ import SpockNextGame from "./SpockNextGame";
 const GameBoard = () => {
   const { spockState, spockDispatch } = GameState();
 
-  //   useEffect(() => {
-  //     dispatch({
-  //       type: "LOADING",
-  //       value: JSON.parse(localStorage.getItem("score")),
-  //     });
-  //   }, []);
+  useEffect(() => {
+    spockDispatch({
+      type: "LOADING",
+      value: JSON.parse(localStorage.getItem("spockGame")),
+    });
+  }, []);
 
-  //   useEffect(() => {
-  //     localStorage.setItem("score", JSON.stringify(state.score));
-  //   }, [state.score]);
+  useEffect(() => {
+    localStorage.setItem("spockGame", JSON.stringify(spockState.score));
+  }, [spockState.score]);
 
   return (
     <Box
