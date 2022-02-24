@@ -10,7 +10,7 @@ const GameContext = ({ children }) => {
     isPlaying: true,
     result: "",
     score: {
-      numerOfMatches: 0,
+      numberOfMatches: 0,
       youWon: 0,
       tie: 0,
       youLose: 0,

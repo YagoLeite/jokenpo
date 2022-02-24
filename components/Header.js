@@ -20,7 +20,7 @@ const Header = () => {
       </Box>
       <Box>
         <Text color="white">Score</Text>
-        <Text color="white">{state.test || ""}</Text>
+        <Text color="white">{state.score.numberOfMatches || ""}</Text>
       </Box>
     </Flex>
   );

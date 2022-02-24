@@ -21,7 +21,7 @@ export const GameReducer = (state, action) => {
         isPlaying: false,
         result: result,
         score: {
-          numerOfMatches: state.score.numerOfMatches + 1,
+          numberOfMatches: state.score.numberOfMatches + 1,
           youWon:
             result === "YOU WIN" ? state.score.youWon + 1 : state.score.youWon,
           tie: result === "TIE" ? state.score.tie + 1 : state.score.tie,
@@ -29,13 +29,13 @@ export const GameReducer = (state, action) => {
             result === "YOU LOSE"
               ? state.score.youLose + 1
               : state.score.youLose,
-          rate: state.score.youWon / state.score.numerOfMatches,
+          rate: state.score.youWon / state.score.numberOfMatches,
         },
       };
     case "NEXT-GAME":
       return { ...state, userPick: "", isPlaying: true };
     case "LOADING":
-      return { ...state, test: action.value };
+      return { ...state, score: action.value };
     default:
       return state;
   }

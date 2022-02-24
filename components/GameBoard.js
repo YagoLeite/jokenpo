@@ -8,9 +8,12 @@ import CurrentGame from "./CurrentGame";
 const GameBoard = () => {
   const { state, dispatch } = GameState();
 
-  // useEffect(() => {
-  //   dispatch({ type: "LOADING", value: localStorage.getItem("score") });
-  // }, []);
+  useEffect(() => {
+    dispatch({
+      type: "LOADING",
+      value: JSON.parse(localStorage.getItem("score")),
+    });
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("score", JSON.stringify(state.score));
