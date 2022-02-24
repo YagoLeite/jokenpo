@@ -5,6 +5,7 @@ import Image from "next/image";
 import { GameState } from "../../Context/Context";
 import NextGame from "./NextGame";
 import CurrentGame from "./CurrentGame";
+
 const GameBoard = () => {
   const { state, dispatch } = GameState();
 
@@ -27,7 +28,6 @@ const GameBoard = () => {
       alignSelf="center"
       position="relative"
       mt="20px"
-      left="25%"
     >
       {state.isPlaying && <CurrentGame />}
       {!state.isPlaying && <NextGame />}

@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, VStack, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import Header from "../components/regular-game/Header";
 import GameBoard from "../components/regular-game/GameBoard";
@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <Box
+    <VStack
       bgGradient="radial(hsl(214, 47%, 23%), hsl(237, 49%, 15%))"
       w="100%"
       h="100vh"
@@ -30,6 +30,6 @@ export default function Home() {
       </Container>
       <GameBoard />
       <Rules />
-    </Box>
+    </VStack>
   );
 }
