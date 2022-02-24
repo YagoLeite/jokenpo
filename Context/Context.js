@@ -8,7 +8,14 @@ const GameContext = ({ children }) => {
     userPick: "",
     housePick: "",
     isPlaying: true,
-    test: 0,
+    result: "",
+    score: {
+      numerOfMatches: 0,
+      youWon: 0,
+      tie: 0,
+      youLose: 0,
+      rate: 0,
+    },
   });
 
   return <Game.Provider value={{ state, dispatch }}>{children}</Game.Provider>;

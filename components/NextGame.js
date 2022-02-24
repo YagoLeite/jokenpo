@@ -3,16 +3,6 @@ import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import { GameState } from "../Context/Context";
 const NextGame = () => {
   const { state, dispatch } = GameState();
-  const result =
-    (state.userPick === "ROCK" && state.housePick === "SCISSORS") ||
-    (state.userPick === "PAPER" && state.housePick === "ROCK") ||
-    (state.userPick === "SCISSORS" && state.housePick === "PAPER")
-      ? "YOU WIN"
-      : (state.userPick === "ROCK" && state.housePick === "ROCK") ||
-        (state.userPick === "PAPER" && state.housePick === "PAPER") ||
-        (state.userPick === "SCISSORS" && state.housePick === "SCISSORS")
-      ? "TIE"
-      : "YOU LOOSE";
 
   return (
     <Flex>
@@ -21,7 +11,7 @@ const NextGame = () => {
         <Button>{state.userPick}</Button>
       </Box>
       <Box>
-        <Text>{result}</Text>
+        <Text>{state.result}</Text>
         <Button onClick={() => dispatch({ type: "NEXT-GAME" })}>
           Next Game
         </Button>
