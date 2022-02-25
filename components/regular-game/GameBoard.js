@@ -21,12 +21,7 @@ const GameBoard = () => {
   }, [state.score]);
 
   return (
-    <Flex
-      mt="20px"
-      justifyContent="center"
-      alignItems="center"
-      bgImage={triangleBg}
-    >
+    <Flex mt="20px" justifyContent="center" alignItems="center">
       {state.isPlaying && <CurrentGame />}
       {!state.isPlaying && <NextGame />}
     </Flex>

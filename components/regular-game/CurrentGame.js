@@ -14,7 +14,12 @@ const CurrentGame = () => {
     dispatch({ type: "SUBMIT", value: option });
   };
   return (
-    <Box bg="transparent" w="400px" h="340px" position="relative">
+    <Box
+      bg="transparent"
+      w={["320px", "360px", "400px"]}
+      h={["280px", "300px", "340px"]}
+      position="relative"
+    >
       <PlayButton
         image={rockIcon}
         config={{
@@ -25,28 +30,39 @@ const CurrentGame = () => {
           position: "absolute",
         }}
         onClick={() => selectionHandler("ROCK")}
+        alt="rock-image"
       />
       <PlayButton
         image={paperIcon}
         config={{
           top: "0",
           right: "0",
-          left: "calc(100% - 170px)",
+          left: [
+            "calc(100% - 140px)",
+            "calc(100% - 150px)",
+            "calc(100% - 170px)",
+          ],
           borderColor: "blue.600",
           position: "absolute",
         }}
+        alt="paper-image"
         onClick={() => selectionHandler("PAPER")}
       />
       <PlayButton
         image={scissorsIcon}
         config={{
-          top: "calc(100% - 170px)",
+          top: [
+            "calc(100% - 140px)",
+            "calc(100% - 150px)",
+            "calc(100% - 170px)",
+          ],
           right: "0",
           left: "0",
           borderColor: "yellow.500",
           margin: "auto",
           position: "absolute",
         }}
+        alt="scissors-image"
         onClick={() => selectionHandler("SCISSORS")}
       />
     </Box>
