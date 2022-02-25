@@ -14,16 +14,22 @@ const Header = () => {
       borderColor="hsl(217, 16%, 45%)"
       p="3%"
     >
-      <Box>
-        <Text color="white">ROCK</Text>
-        <Text color="white">PAPER</Text>
-        <Text color="white">SCISSORS</Text>
+      <Box fontSize="30px">
+        <Text color="white" mb="-15px">
+          ROCK
+        </Text>
+        <Text color="white" mb="-15px">
+          PAPER
+        </Text>
+        <Text color="white" mt="-15px">
+          SCISSORS
+        </Text>
       </Box>
       <VStack bg="white" w="18%" borderRadius="4px" pt="1px" pb="1px">
         <Text fontSize="14px" color="hsl(229, 64%, 46%)">
           SCORE
         </Text>
-        <Text fontSize="28px" color="hsl(229, 25%, 31%)">
+        <Text fontSize="58px" color="hsl(229, 25%, 31%)">
           {state.score.numberOfMatches || ""}
         </Text>
       </VStack>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Flex, Text, Stack } from "@chakra-ui/react";
+import { Box, Button, Flex, Text, Stack, VStack } from "@chakra-ui/react";
 import { GameState } from "../../Context/Context";
 import rockIcon from "../../styles/images/icon-rock.svg";
 import paperIcon from "../../styles/images/icon-paper.svg";
@@ -10,8 +10,15 @@ const NextGame = () => {
   const { state, dispatch } = GameState();
 
   return (
-    <Stack direction={["column", "row"]} color="white">
-      <Box>
+    <Stack
+      direction={["column", "row"]}
+      justifyContent="space-between"
+      alignItems="center"
+      color="white"
+      w="80%"
+      maxW="800px"
+    >
+      <VStack>
         <Text>You Picked</Text>
         {state.userPick === "ROCK" ? (
           <PlayButton image={rockIcon} config={{ borderColor: "red.500" }} />
@@ -23,14 +30,19 @@ const NextGame = () => {
             config={{ borderColor: "yellow.500" }}
           />
         )}
-      </Box>
-      <Box>
-        <Text fontSize={["20px", "40px"]}>{state.result}</Text>
-        <Button onClick={() => dispatch({ type: "NEXT-GAME" })}>
-          Next Game
+      </VStack>
+      <VStack w="100%">
+        <Text fontSize={["20px", "28px", "40px"]}>{state.result}</Text>
+        <Button
+          w="70%"
+          color="hsl(229, 25%, 31%)"
+          _hover={{ color: "red.400" }}
+          onClick={() => dispatch({ type: "NEXT-GAME" })}
+        >
+          Play Again
         </Button>
-      </Box>
-      <Box>
+      </VStack>
+      <VStack>
         <Text>House Picked</Text>
         {state.housePick === "ROCK" ? (
           <PlayButton image={rockIcon} config={{ borderColor: "red.500" }} />
@@ -42,7 +54,7 @@ const NextGame = () => {
             config={{ borderColor: "yellow.500" }}
           />
         )}
-      </Box>
+      </VStack>
     </Stack>
   );
 };
