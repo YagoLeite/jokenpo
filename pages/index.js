@@ -14,6 +14,7 @@ export default function Home() {
       alignContent="center"
       justifyContent="center"
       position="relative"
+      spacing={20}
     >
       <Head>
         <title>Jokenpo</title>

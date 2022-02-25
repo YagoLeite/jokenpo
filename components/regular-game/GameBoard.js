@@ -1,7 +1,7 @@
 import { Box, Button, Flex } from "@chakra-ui/react";
 import React, { useEffect } from "react";
 import Image from "next/image";
-// import triangleBg from "../styles/images/bg-triangle.svg";
+import triangleBg from "../../styles/images/bg-triangle.svg";
 import { GameState } from "../../Context/Context";
 import NextGame from "./NextGame";
 import CurrentGame from "./CurrentGame";
@@ -21,17 +21,15 @@ const GameBoard = () => {
   }, [state.score]);
 
   return (
-    <Box
-      w="500px"
-      h="500px"
-      bg="white"
-      alignSelf="center"
-      position="relative"
+    <Flex
       mt="20px"
+      justifyContent="center"
+      alignItems="center"
+      bgImage={triangleBg}
     >
       {state.isPlaying && <CurrentGame />}
       {!state.isPlaying && <NextGame />}
-    </Box>
+    </Flex>
   );
 };
 

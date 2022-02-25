@@ -5,36 +5,25 @@ import rockIcon from "../../styles/images/icon-rock.svg";
 import paperIcon from "../../styles/images/icon-paper.svg";
 import scissorsIcon from "../../styles/images/icon-scissors.svg";
 import Image from "next/image";
+import PlayButton from "../buttons/PlayButton";
 
 const NextGame = () => {
   const { state, dispatch } = GameState();
 
   return (
-    <Flex>
+    <Flex color="white">
       <Box>
         <Text>You Picked</Text>
-        <Flex
-          bg="red"
-          h="170px"
-          w="170px"
-          borderRadius="50%"
-          borderWidth="20px"
-          borderColor="black"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Image
-            src={
-              state.userPick === "ROCK"
-                ? rockIcon
-                : state.userPick === "PAPER"
-                ? paperIcon
-                : scissorsIcon
-            }
-            width="100%"
-            height="100%"
+        {state.userPick === "ROCK" ? (
+          <PlayButton image={rockIcon} config={{ borderColor: "red.500" }} />
+        ) : state.userPick === "PAPER" ? (
+          <PlayButton image={paperIcon} config={{ borderColor: "blue.600" }} />
+        ) : (
+          <PlayButton
+            image={scissorsIcon}
+            config={{ borderColor: "yellow.500" }}
           />
-        </Flex>
+        )}
       </Box>
       <Box>
         <Text>{state.result}</Text>
@@ -42,31 +31,16 @@ const NextGame = () => {
           Next Game
         </Button>
       </Box>
-      <Box>
-        <Text>The House Picked</Text>
-        <Flex
-          bg="red"
-          h="170px"
-          w="170px"
-          borderRadius="50%"
-          borderWidth="20px"
-          borderColor="black"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Image
-            src={
-              state.housePick === "ROCK"
-                ? rockIcon
-                : state.housePick === "PAPER"
-                ? paperIcon
-                : scissorsIcon
-            }
-            width="100%"
-            height="100%"
-          />
-        </Flex>
-      </Box>
+      {state.housePick === "ROCK" ? (
+        <PlayButton image={rockIcon} config={{ borderColor: "red.500" }} />
+      ) : state.housePick === "PAPER" ? (
+        <PlayButton image={paperIcon} config={{ borderColor: "blue.600" }} />
+      ) : (
+        <PlayButton
+          image={scissorsIcon}
+          config={{ borderColor: "yellow.500" }}
+        />
+      )}
     </Flex>
   );
 };

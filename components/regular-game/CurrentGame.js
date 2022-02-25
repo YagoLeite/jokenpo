@@ -1,10 +1,11 @@
 import React from "react";
-import { Flex, Button } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import { GameState } from "../../Context/Context";
 import rockIcon from "../../styles/images/icon-rock.svg";
 import paperIcon from "../../styles/images/icon-paper.svg";
 import scissorsIcon from "../../styles/images/icon-scissors.svg";
 import Image from "next/image";
+import PlayButton from "../buttons/PlayButton";
 
 const CurrentGame = () => {
   const { state, dispatch } = GameState();
@@ -13,47 +14,42 @@ const CurrentGame = () => {
     dispatch({ type: "SUBMIT", value: option });
   };
   return (
-    <Flex>
-      <Flex
-        bg="red"
-        h="170px"
-        w="170px"
-        borderRadius="50%"
-        borderWidth="20px"
-        borderColor="black"
-        justifyContent="center"
-        alignItems="center"
+    <Box bg="transparent" w="400px" h="340px" position="relative">
+      <PlayButton
+        image={rockIcon}
+        config={{
+          top: "0",
+          right: "100%",
+          left: "0",
+          borderColor: "red.500",
+          position: "absolute",
+        }}
         onClick={() => selectionHandler("ROCK")}
-      >
-        <Image src={rockIcon} width="100%" height="100%" />
-      </Flex>
-      <Flex
-        bg="red"
-        h="170px"
-        w="170px"
-        borderRadius="50%"
-        borderWidth="20px"
-        borderColor="black"
-        justifyContent="center"
-        alignItems="center"
+      />
+      <PlayButton
+        image={paperIcon}
+        config={{
+          top: "0",
+          right: "0",
+          left: "calc(100% - 170px)",
+          borderColor: "blue.600",
+          position: "absolute",
+        }}
         onClick={() => selectionHandler("PAPER")}
-      >
-        <Image src={paperIcon} width="100%" height="100%" />
-      </Flex>
-      <Flex
-        bg="red"
-        h="170px"
-        w="170px"
-        borderRadius="50%"
-        borderWidth="20px"
-        borderColor="black"
-        justifyContent="center"
-        alignItems="center"
+      />
+      <PlayButton
+        image={scissorsIcon}
+        config={{
+          top: "calc(100% - 170px)",
+          right: "0",
+          left: "0",
+          borderColor: "yellow.500",
+          margin: "auto",
+          position: "absolute",
+        }}
         onClick={() => selectionHandler("SCISSORS")}
-      >
-        <Image src={scissorsIcon} width="100%" height="100%" />
-      </Flex>
-    </Flex>
+      />
+    </Box>
   );
 };
 
