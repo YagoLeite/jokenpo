@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Flex, Text, Stack, VStack } from "@chakra-ui/react";
+import { Button, Text, VStack, Grid, GridItem } from "@chakra-ui/react";
 import { GameState } from "../../Context/Context";
 import rockIcon from "../../styles/images/icon-rock.svg";
 import paperIcon from "../../styles/images/icon-paper.svg";
@@ -10,16 +10,15 @@ const NextGame = () => {
   const { state, dispatch } = GameState();
 
   return (
-    <Stack
-      direction={["column", "row"]}
-      justifyContent="space-between"
-      alignItems="center"
+    <Grid
+      gridTemplateColumns={["repeat(2, 1fr)", "repeat(3, 1fr)"]}
+      gap={4}
       color="white"
-      w="80%"
-      maxW="800px"
     >
-      <VStack order={["1", "1"]}>
-        <Text>You Picked</Text>
+      <VStack spacing={[6, 10]}>
+        <Text letterSpacing={[2, 2, 3]} fontSize={["16px", "16px", "24px"]}>
+          You Picked
+        </Text>
         {state.userPick === "ROCK" ? (
           <PlayButton
             image={rockIcon}
@@ -49,20 +48,34 @@ const NextGame = () => {
           />
         )}
       </VStack>
-      <VStack w="100%" order={["3", "2"]}>
-        <Text fontSize={["20px", "28px", "40px"]}>{state.result}</Text>
-        <Button
-          w="70%"
-          minW="100px"
-          color="hsl(229, 25%, 31%)"
-          _hover={{ color: "red.400" }}
-          onClick={() => dispatch({ type: "NEXT-GAME" })}
+      <GridItem
+        rowStart={["2", "1"]}
+        colStart={["1", "2"]}
+        colEnd={["-1", "2"]}
+      >
+        <VStack
+          w="100%"
+          h="100%"
+          order={["3", "2"]}
+          justify="center"
+          align="center"
         >
-          Play Again
-        </Button>
-      </VStack>
-      <VStack order={["2", "3"]}>
-        <Text>House Picked</Text>
+          <Text fontSize={["20px", "28px", "40px"]}>{state.result}</Text>
+          <Button
+            w="70%"
+            minW="100px"
+            color="hsl(229, 25%, 31%)"
+            _hover={{ color: "red.400" }}
+            onClick={() => dispatch({ type: "NEXT-GAME" })}
+          >
+            Play Again
+          </Button>
+        </VStack>
+      </GridItem>
+      <VStack spacing={[6, 10]}>
+        <Text letterSpacing={[2, 2, 3]} fontSize={["16px", "16px", "24px"]}>
+          The House Picked
+        </Text>
         {state.housePick === "ROCK" ? (
           <PlayButton
             image={rockIcon}
@@ -92,7 +105,7 @@ const NextGame = () => {
           />
         )}
       </VStack>
-    </Stack>
+    </Grid>
   );
 };
 
