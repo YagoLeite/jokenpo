@@ -28,6 +28,8 @@ const CurrentGame = () => {
           left: "0",
           borderColor: "red.500",
           position: "absolute",
+          h: ["140px", "150px", "170px"],
+          w: ["140px", "150px", "170px"],
         }}
         onClick={() => selectionHandler("ROCK")}
         alt="rock-image"
@@ -44,6 +46,8 @@ const CurrentGame = () => {
           ],
           borderColor: "blue.600",
           position: "absolute",
+          h: ["140px", "150px", "170px"],
+          w: ["140px", "150px", "170px"],
         }}
         alt="paper-image"
         onClick={() => selectionHandler("PAPER")}
@@ -61,6 +65,8 @@ const CurrentGame = () => {
           borderColor: "yellow.500",
           margin: "auto",
           position: "absolute",
+          h: ["140px", "150px", "170px"],
+          w: ["140px", "150px", "170px"],
         }}
         alt="scissors-image"
         onClick={() => selectionHandler("SCISSORS")}
