@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Text } from "@chakra-ui/react";
+import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 import SpockHeader from "../../components/spock-game/SpockHeader";
@@ -7,13 +7,14 @@ import SpockGameBoard from "../../components/spock-game/SpockGameBoard";
 
 export default function Home() {
   return (
-    <Box
+    <VStack
       bgGradient="radial(hsl(214, 47%, 23%), hsl(237, 49%, 15%))"
       w="100%"
       h="100vh"
       alignContent="center"
       justifyContent="center"
       position="relative"
+      spacing={10}
     >
       <Head>
         <title>Jokenpo</title>
@@ -30,6 +31,6 @@ export default function Home() {
       </Container>
       <SpockGameBoard />
       <SpockRules />
-    </Box>
+    </VStack>
   );
 }
