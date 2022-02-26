@@ -13,7 +13,7 @@ const SpockHeader = () => {
       borderColor="hsl(217, 16%, 45%)"
       p="3%"
     >
-      <Box fontSize={["24px", "30px"]}>
+      <Box fontSize={["20px", "24px"]}>
         <Text color="white" mb="-15px">
           ROCK
         </Text>

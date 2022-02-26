@@ -114,11 +114,29 @@ const SpockNextGame = () => {
               w: ["140px", "150px", "200px"],
             }}
           />
-        ) : (
+        ) : spockState.housePick === "SCISSORS" ? (
           <PlayButton
             image={scissorsIcon}
             config={{
               borderColor: "yellow.500",
+              h: ["140px", "150px", "200px"],
+              w: ["140px", "150px", "200px"],
+            }}
+          />
+        ) : spockState.housePick === "LIZARD" ? (
+          <PlayButton
+            image={lizardIcon}
+            config={{
+              borderColor: "purple.500",
+              h: ["140px", "150px", "200px"],
+              w: ["140px", "150px", "200px"],
+            }}
+          />
+        ) : (
+          <PlayButton
+            image={spockIcon}
+            config={{
+              borderColor: "blue.200",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
             }}
