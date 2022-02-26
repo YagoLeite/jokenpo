@@ -21,18 +21,10 @@ const GameBoard = () => {
   }, [spockState.score]);
 
   return (
-    <Box
-      w="500px"
-      h="500px"
-      bg="white"
-      alignSelf="center"
-      position="relative"
-      mt="20px"
-      left="25%"
-    >
+    <Flex w="100%" justifyContent="center" alignItems="center">
       {spockState.isPlaying && <SpockCurrentGame />}
       {!spockState.isPlaying && <SpockNextGame />}
-    </Box>
+    </Flex>
   );
 };
 
