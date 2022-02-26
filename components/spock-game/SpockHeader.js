@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text } from "@chakra-ui/react";
+import { Flex, Box, Text, VStack } from "@chakra-ui/react";
 import { GameState } from "../../Context/Context";
 
 const SpockHeader = () => {
@@ -8,21 +8,36 @@ const SpockHeader = () => {
   return (
     <Flex
       justifyContent="space-between"
-      borderWidth="1px"
-      borderRadius="15px"
-      p="5px"
+      borderWidth="3px"
+      borderRadius="8px"
+      borderColor="hsl(217, 16%, 45%)"
+      p="3%"
     >
-      <Box>
-        <Text color="white">ROCK</Text>
-        <Text color="white">PAPER</Text>
-        <Text color="white">SCISSORS</Text>
-        <Text color="white">LIZARD</Text>
-        <Text color="white">SPOCK</Text>
+      <Box fontSize={["24px", "30px"]}>
+        <Text color="white" mb="-15px">
+          ROCK
+        </Text>
+        <Text color="white" mb="-15px">
+          PAPER
+        </Text>
+        <Text color="white" mt="-15px">
+          SCISSORS
+        </Text>
+        <Text color="white" mt="-15px">
+          LIZARD
+        </Text>
+        <Text color="white" mt="-15px">
+          SPOCK
+        </Text>
       </Box>
-      <Box>
-        <Text color="white">Score</Text>
-        <Text color="white">{spockState.score.numberOfMatches || ""}</Text>
-      </Box>
+      <VStack bg="white" w="25%" borderRadius="4px" pt="1px" pb="1px">
+        <Text fontSize="14px" color="hsl(229, 64%, 46%)">
+          SCORE
+        </Text>
+        <Text fontSize={["38px", "50px"]} color="hsl(229, 25%, 31%)">
+          {spockState.score.numberOfMatches || ""}
+        </Text>
+      </VStack>
     </Flex>
   );
 };
