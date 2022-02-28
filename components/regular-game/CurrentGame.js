@@ -30,6 +30,7 @@ const CurrentGame = () => {
           position: "absolute",
           h: ["140px", "150px", "170px"],
           w: ["140px", "150px", "170px"],
+          borderWidth: ["15px", "17px", "20px"],
         }}
         onClick={() => selectionHandler("ROCK")}
         alt="rock-image"
@@ -48,6 +49,7 @@ const CurrentGame = () => {
           position: "absolute",
           h: ["140px", "150px", "170px"],
           w: ["140px", "150px", "170px"],
+          borderWidth: ["15px", "17px", "20px"],
         }}
         alt="paper-image"
         onClick={() => selectionHandler("PAPER")}
@@ -67,6 +69,7 @@ const CurrentGame = () => {
           position: "absolute",
           h: ["140px", "150px", "170px"],
           w: ["140px", "150px", "170px"],
+          borderWidth: ["15px", "17px", "20px"],
         }}
         alt="scissors-image"
         onClick={() => selectionHandler("SCISSORS")}

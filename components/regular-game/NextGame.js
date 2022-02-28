@@ -26,6 +26,7 @@ const NextGame = () => {
               borderColor: "red.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : state.userPick === "PAPER" ? (
@@ -35,6 +36,7 @@ const NextGame = () => {
               borderColor: "blue.600",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : (
@@ -44,6 +46,7 @@ const NextGame = () => {
               borderColor: "yellow.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         )}
@@ -83,6 +86,7 @@ const NextGame = () => {
               borderColor: "red.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : state.housePick === "PAPER" ? (
@@ -92,6 +96,7 @@ const NextGame = () => {
               borderColor: "blue.600",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : (
@@ -101,6 +106,7 @@ const NextGame = () => {
               borderColor: "yellow.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         )}
