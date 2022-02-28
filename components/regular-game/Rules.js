@@ -16,7 +16,17 @@ const Rules = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Button onClick={onOpen}>Rules</Button>
+      <Button
+        onClick={onOpen}
+        bg="transparent"
+        color="white"
+        borderWidth="1px"
+        borderColor="hsl(217, 16%, 45%)"
+        _hover={{ bg: "transparent" }}
+        _active={{ bg: "transparent" }}
+      >
+        Rules
+      </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
