@@ -28,6 +28,7 @@ const SpockNextGame = () => {
               borderColor: "red.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : spockState.userPick === "PAPER" ? (
@@ -37,6 +38,7 @@ const SpockNextGame = () => {
               borderColor: "blue.600",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : spockState.userPick === "SCISSORS" ? (
@@ -46,6 +48,7 @@ const SpockNextGame = () => {
               borderColor: "yellow.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : spockState.userPick === "LIZARD" ? (
@@ -55,6 +58,7 @@ const SpockNextGame = () => {
               borderColor: "purple.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : (
@@ -64,6 +68,7 @@ const SpockNextGame = () => {
               borderColor: "blue.200",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         )}
@@ -103,6 +108,7 @@ const SpockNextGame = () => {
               borderColor: "red.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : spockState.housePick === "PAPER" ? (
@@ -112,6 +118,7 @@ const SpockNextGame = () => {
               borderColor: "blue.600",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : spockState.housePick === "SCISSORS" ? (
@@ -121,6 +128,7 @@ const SpockNextGame = () => {
               borderColor: "yellow.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : spockState.housePick === "LIZARD" ? (
@@ -130,6 +138,7 @@ const SpockNextGame = () => {
               borderColor: "purple.500",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         ) : (
@@ -139,6 +148,7 @@ const SpockNextGame = () => {
               borderColor: "blue.200",
               h: ["140px", "150px", "200px"],
               w: ["140px", "150px", "200px"],
+              borderWidth: ["15px", "17px", "20px"],
             }}
           />
         )}
