@@ -32,7 +32,7 @@ export default function Home() {
         <SpockHeader />
       </Container>
       <SpockGameBoard />
-      <HStack>
+      <HStack w="80%" justifyContent="space-between">
         <Button
           bg="transparent"
           color="white"
