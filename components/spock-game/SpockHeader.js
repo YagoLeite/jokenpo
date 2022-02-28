@@ -35,7 +35,7 @@ const SpockHeader = () => {
           SCORE
         </Text>
         <Text fontSize={["38px", "50px"]} color="hsl(229, 25%, 31%)">
-          {spockState.score.numberOfMatches || ""}
+          {spockState.score.youWon || ""}
         </Text>
       </VStack>
     </Flex>
