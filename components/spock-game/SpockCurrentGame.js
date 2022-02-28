@@ -23,7 +23,11 @@ const CurrentGame = () => {
     //   <Button onClick={() => selectionHandler("LIZARD")}>Lizard</Button>
     //   <Button onClick={() => selectionHandler("SPOCK")}>Spock</Button>
     // </Flex>
-    <Box bg="red" h={test} w={test} position="relative">
+    <Box
+      h={["300px", "340px", "400px"]}
+      w={["300px", "340px", "400px"]}
+      position="relative"
+    >
       {/* <Box position="absolute" top="0" right="50%">
         1
       </Box> */}
@@ -31,10 +35,11 @@ const CurrentGame = () => {
         image={scissorsIcon}
         config={{
           borderColor: "yellow.500",
-          h: ["140px", "150px", "120px"],
-          w: ["140px", "150px", "120px"],
+          h: ["60px", "80px", "105px"],
+          w: ["60px", "80px", "105px"],
+          borderWidth: ["7px", "10px"],
           top: "0",
-          left: "calc(50% - 60px)",
+          left: ["calc(50% - 30px)", "calc(50% - 40px)", "calc(50% - 50.5px)"],
           position: "absolute",
         }}
       />
@@ -42,9 +47,14 @@ const CurrentGame = () => {
         image={rockIcon}
         config={{
           borderColor: "red.500",
-          h: ["140px", "150px", "120px"],
-          w: ["140px", "150px", "120px"],
-          top: "calc(34.5% - 60px)",
+          h: ["60px", "80px", "105px"],
+          w: ["60px", "80px", "105px"],
+          borderWidth: ["7px", "10px"],
+          top: [
+            "calc(34.5% - 30px)",
+            "calc(34.5% - 40px)",
+            "calc(34.5% - 50.5px)",
+          ],
           left: "2.5%",
           position: "absolute",
         }}
@@ -59,9 +69,14 @@ const CurrentGame = () => {
         image={spockIcon}
         config={{
           borderColor: "blue.200",
-          h: ["140px", "150px", "120px"],
-          w: ["140px", "150px", "120px"],
-          top: "calc(34.5% - 60px)",
+          h: ["60px", "80px", "105px"],
+          w: ["60px", "80px", "105px"],
+          borderWidth: ["7px", "10px"],
+          top: [
+            "calc(34.5% - 30px)",
+            "calc(34.5% - 40px)",
+            "calc(34.5% - 50.5px)",
+          ],
           right: "2.5%",
           position: "absolute",
         }}
@@ -73,9 +88,14 @@ const CurrentGame = () => {
         image={rockIcon}
         config={{
           borderColor: "red.500",
-          h: ["140px", "150px", "120px"],
-          w: ["140px", "150px", "120px"],
-          top: "calc(90.5% - 120px)",
+          h: ["60px", "80px", "105px"],
+          w: ["60px", "80px", "105px"],
+          borderWidth: ["7px", "10px"],
+          top: [
+            "calc(90.5% - 60px)",
+            "calc(90.5% - 80px)",
+            "calc(90.5% - 105px)",
+          ],
           left: "20.6%",
           position: "absolute",
         }}
@@ -87,9 +107,14 @@ const CurrentGame = () => {
         image={rockIcon}
         config={{
           borderColor: "red.500",
-          h: ["140px", "150px", "120px"],
-          w: ["140px", "150px", "120px"],
-          top: "calc(90.5% - 120px)",
+          h: ["60px", "80px", "105px"],
+          w: ["60px", "80px", "105px"],
+          borderWidth: ["7px", "10px"],
+          top: [
+            "calc(90.5% - 60px)",
+            "calc(90.5% - 80px)",
+            "calc(90.5% - 105px)",
+          ],
           right: "20.6%",
           position: "absolute",
         }}
