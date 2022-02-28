@@ -1,4 +1,12 @@
-import { Box, Container, Flex, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  HStack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 import SpockHeader from "../../components/spock-game/SpockHeader";
@@ -11,8 +19,7 @@ export default function Home() {
       bgGradient="radial(hsl(214, 47%, 23%), hsl(237, 49%, 15%))"
       w="100%"
       h="100vh"
-      alignContent="center"
-      justifyContent="center"
+      pt="5%"
       position="relative"
       spacing={10}
     >
@@ -21,16 +28,25 @@ export default function Home() {
         <meta name="description" content="Jokenpo game" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Box>
-        <Link href="/">
-          <Text color="white">rock paper scissors</Text>
-        </Link>
-      </Box>
       <Container>
         <SpockHeader />
       </Container>
       <SpockGameBoard />
-      <SpockRules />
+      <HStack>
+        <Button
+          bg="transparent"
+          color="white"
+          borderWidth="1px"
+          borderColor="hsl(217, 16%, 45%)"
+          _hover={{ bg: "transparent" }}
+          _active={{ bg: "transparent" }}
+        >
+          <Link href="/">
+            <Text color="white">rock paper scissors</Text>
+          </Link>
+        </Button>
+        <SpockRules />
+      </HStack>
     </VStack>
   );
 }
