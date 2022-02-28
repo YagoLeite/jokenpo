@@ -24,8 +24,11 @@ export default function Home() {
       spacing={10}
     >
       <Head>
-        <title>Jokenpo</title>
-        <meta name="description" content="Jokenpo game" />
+        <title>ROCK PAPER SCISSORS LIZARD SPOCK</title>
+        <meta
+          name="description"
+          content="Rock, paper, scissors, lizard, spock game"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
@@ -42,7 +45,7 @@ export default function Home() {
           _active={{ bg: "transparent" }}
         >
           <Link href="/">
-            <Text color="white">rock paper scissors</Text>
+            <Text color="white">Go to: NORMAL Level</Text>
           </Link>
         </Button>
         <SpockRules />
