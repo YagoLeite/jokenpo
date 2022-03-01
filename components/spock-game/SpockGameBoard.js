@@ -10,10 +10,11 @@ const GameBoard = () => {
   const { spockState, spockDispatch } = GameState();
 
   useEffect(() => {
-    spockDispatch({
-      type: "LOADING",
-      value: JSON.parse(localStorage.getItem("spockGame")),
-    });
+    if (localStorage.getItem("spockGame"))
+      spockDispatch({
+        type: "LOADING",
+        value: JSON.parse(localStorage.getItem("spockGame")),
+      });
   }, []);
 
   useEffect(() => {

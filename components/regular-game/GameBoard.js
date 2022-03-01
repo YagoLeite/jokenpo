@@ -10,12 +10,12 @@ const GameBoard = () => {
   const { state, dispatch } = GameState();
 
   useEffect(() => {
-    dispatch({
-      type: "LOADING",
-      value: JSON.parse(localStorage.getItem("score")),
-    });
+    if (localStorage.getItem("score"))
+      dispatch({
+        type: "LOADING",
+        value: JSON.parse(localStorage.getItem("score")),
+      });
   }, []);
-
   useEffect(() => {
     localStorage.setItem("score", JSON.stringify(state.score));
   }, [state.score]);
