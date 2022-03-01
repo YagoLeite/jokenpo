@@ -30,7 +30,7 @@ const Header = () => {
           SCORE
         </Text>
         <Text fontSize={["38px", "50px"]} color="hsl(229, 25%, 31%)">
-          {state.score.youWon || ""}
+          {state.score.youWon || "0"}
         </Text>
       </VStack>
     </Flex>
