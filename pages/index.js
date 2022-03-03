@@ -29,10 +29,35 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Container>
+        <Button
+          bg="transparent"
+          _hover={{ bg: "transparent" }}
+          _active={{ bg: "transparent" }}
+          w="100%"
+        >
+          <a href="https://github.com/YagoLeite" target="_blank">
+            <Text
+              bgGradient="linear(to-r, #C9FFBF, #FFAFBD)"
+              bgClip="text"
+              fontSize="24px"
+              letterSpacing={3}
+              _hover={{
+                bgGradient: "linear(to-r, pink.200, yellow.400, gray.300)",
+                bgClip: "text",
+              }}
+            >
+              Made by: Yago Leite
+            </Text>
+          </a>
+        </Button>
         <Header />
       </Container>
       <GameBoard />
-      <HStack w="80%" justifyContent="space-between">
+      <HStack
+        w="80%"
+        justifyContent="space-between"
+        fontSize={["12px", "14px", "28px"]}
+      >
         <Button
           bg="transparent"
           color="white"
