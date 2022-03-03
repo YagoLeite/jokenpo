@@ -35,7 +35,11 @@ export default function Home() {
           _active={{ bg: "transparent" }}
           w="100%"
         >
-          <a href="https://github.com/YagoLeite" target="_blank">
+          <a
+            href="https://github.com/YagoLeite"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Text
               bgGradient="linear(to-r, #C9FFBF, #FFAFBD)"
               bgClip="text"

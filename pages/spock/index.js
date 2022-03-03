@@ -21,7 +21,7 @@ export default function Home() {
       h="100vh"
       pt="3%"
       position="relative"
-      spacing={10}
+      spacing={6}
     >
       <Head>
         <title>ROCK PAPER SCISSORS LIZARD SPOCK</title>
@@ -38,7 +38,11 @@ export default function Home() {
           _active={{ bg: "transparent" }}
           w="100%"
         >
-          <a href="https://github.com/YagoLeite" target="_blank">
+          <a
+            href="https://github.com/YagoLeite"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Text
               bgGradient="linear(to-r, #C9FFBF, #FFAFBD)"
               bgClip="text"
