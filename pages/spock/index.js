@@ -18,8 +18,8 @@ export default function Home() {
     <VStack
       bgGradient="radial(hsl(214, 47%, 23%), hsl(237, 49%, 15%))"
       w="100%"
-      h="100vh"
-      pt="3%"
+      h="fit-content"
+      py="3%"
       position="relative"
       spacing={6}
     >
