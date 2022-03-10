@@ -50,3 +50,4 @@ Users should be able to:
 
 - Website - [My Portifolio](https://portifolio-12fab.web.app)
 - Frontend Mentor - [@YagoLeite](https://www.frontendmentor.io/profile/YagoLeite)
+- LinkedIn - [Yago Leite](https://www.linkedin.com/in/yagoleite/)
