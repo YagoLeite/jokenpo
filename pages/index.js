@@ -19,6 +19,7 @@ export default function Home() {
       bgGradient="radial(hsl(214, 47%, 23%), hsl(237, 49%, 15%))"
       w="100%"
       h="fit-content"
+      minH="100vh"
       py="5%"
       position="relative"
       spacing={10}
