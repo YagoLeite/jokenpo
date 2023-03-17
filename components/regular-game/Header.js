@@ -14,17 +14,16 @@ const Header = () => {
       borderColor="hsl(217, 16%, 45%)"
       p="3%"
     >
-      <Box fontSize={["24px", "30px"]}>
-        <Text color="white" mb="-15px">
-          ROCK
-        </Text>
-        <Text color="white" mb="-15px">
-          PAPER
-        </Text>
-        <Text color="white" mt="-15px">
-          SCISSORS
-        </Text>
-      </Box>
+      <Flex
+        h="100%"
+        direction="column"
+        gap="5px"
+        fontSize={["20px", "24px", "30px"]}
+      >
+        <Text color="white">ROCK</Text>
+        <Text color="white">PAPER</Text>
+        <Text color="white">SCISSORS</Text>
+      </Flex>
       <VStack bg="white" w="25%" borderRadius="4px" pt="1px" pb="1px">
         <Text fontSize="14px" color="hsl(229, 64%, 46%)">
           SCORE
